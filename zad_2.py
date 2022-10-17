@@ -1,5 +1,6 @@
 class Library:
-    def __init__(self, city: str, street: str, zip_code: str, open_hours: str, phone: str):
+    def __init__(self, city: str, street: str, zip_code: str, open_hours: str,
+                 phone: str):
         self.city = city
         self.street = street
         self.zip_code = zip_code
@@ -7,12 +8,15 @@ class Library:
         self.phone = phone
 
     def __str__(self):
-        return f'Biblioteka w mieście {self.city} na ulicy {self.street}. Kod pocztowy: {self.zip_code}. Numer telefonu: {self.phone}. Godziny otwarcia: {self.open_hours}'
+        return f'Biblioteka w mieście {self.city} na ulicy {self.street}. ' \
+               f'Kod pocztowy: {self.zip_code}. ' \
+               f'Numer telefonu: {self.phone}. ' \
+               f'Godziny otwarcia: {self.open_hours}'
 
 
 class Employee:
-    def __init__(self, first_name: str, last_name: str, hire_date, birth_date, city: str,
-                 street: str, zip_code: str, phone: str):
+    def __init__(self, first_name: str, last_name: str, hire_date, birth_date,
+                 city: str, street: str, zip_code: str, phone: str):
         self.phone = phone
         self.zip_code = zip_code
         self.street = street
@@ -23,11 +27,16 @@ class Employee:
         self.first_name = first_name
 
     def __str__(self):
-        return f'Pracownik {self.first_name} {self.last_name}. Zamieszkały: {self.street} {self.zip_code} {self.city}. Numer telefonu: {self.phone}. Zatrudniony {self.hire_date}. Urodzony {self.birth_date}'
+        return f'Pracownik {self.first_name} {self.last_name}. ' \
+               f'Zamieszkały: {self.street} {self.zip_code} {self.city}. ' \
+               f'Numer telefonu: {self.phone}. ' \
+               f'Zatrudniony {self.hire_date}. ' \
+               f'Urodzony {self.birth_date}'
 
 
 class Book:
-    def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
+    def __init__(self, library, publication_date, author_name, author_surname,
+                 number_of_pages):
         self.number_of_pages = number_of_pages
         self.author_surname = author_surname
         self.author_name = author_name
@@ -35,7 +44,10 @@ class Book:
         self.library = library
 
     def __str__(self):
-        return f'Książka autorstwa {self.author_name} {self.author_surname} opublikowana {self.publication_date} zawiera {self.number_of_pages} stron znajduje się w {self.library}'
+        return f'Książka autorstwa {self.author_name} {self.author_surname} ' \
+               f'opublikowana {self.publication_date} ' \
+               f'zawiera {self.number_of_pages} stron ' \
+               f'znajduje się w {self.library}'
 
 
 class Order:
@@ -46,7 +58,9 @@ class Order:
         self.employee = employee
 
     def __str__(self):
-        return f'Zamówienie studenta {self.student} zrealizowane {self.order_date} przez {self.employee} na książki: {self.books}'
+        return f'Zamówienie studenta {self.student} ' \
+               f'zrealizowane {self.order_date} ' \
+               f'przez {self.employee} na książki: {self.books}'
 
 
 l1 = Library("Katowice", "Chorzowska", "40-012", "10-18", "123456789")
@@ -58,9 +72,12 @@ b3 = Book(l1, "22/01/2022", "Halina", "Klementynowicz", 310)
 b4 = Book(l1, "16/12/2008", "Jan", "Szpak", 310)
 b5 = Book(l2, "02/03/1993", "Józef", "Mnich", 310)
 
-e1 = Employee("Eugeniusz", "Smolarek", "20/08/2009", "10/02/1968", "Wadowice", "Biskupińska", "22-012", "654234765")
-e2 = Employee("Stanisław", "Lato", "20/08/2009", "12/03/1985", "Kraków", "Biskupińska", "22-012", "686534765")
-e3 = Employee("Stanisława", "Zima", "20/08/2009", "24/11/1998", "Dąbrowa Górnicza", "Wolności", "22-012", "654234235")
+e1 = Employee("Eugeniusz", "Smolarek", "20/08/2009", "10/02/1968",
+              "Wadowice", "Biskupińska", "22-012", "654234765")
+e2 = Employee("Stanisław", "Lato", "20/08/2009", "12/03/1985",
+              "Kraków", "Biskupińska", "22-012", "686534765")
+e3 = Employee("Stanisława", "Zima", "20/08/2009", "24/11/1998",
+              "Dąbrowa Górnicza", "Wolności", "22-012", "654234235")
 
 o1 = Order(e1, "Radosław Żółk", [b1, b2], "01/02/2010")
 print(o1)
