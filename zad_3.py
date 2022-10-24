@@ -1,37 +1,5 @@
-class Property:
-    def __init__(self, area, rooms: int, price: int, address: str):
-        self.address = address
-        self.price = price
-        self.rooms = rooms
-        self.area = area
-
-    def __str__(self):
-        return f'Posiadłość {self.address} z {self.rooms} pokojami. ' \
-               f'Powierzchnia: {self.area}m2. Cena: {self.price}zł'
-
-
-class House(Property):
-    def __init__(self, plot, area, rooms: int, price: int, address: str):
-        super().__init__(area, rooms, price, address)
-        self.plot = plot
-
-    def __str__(self):
-        return f'Dom {self.address} z {self.rooms} pokojami. ' \
-               f'Powierzchnia domu: {self.area}m2. ' \
-               f'Powierzchnia działki: {self.plot}m2. ' \
-               f'Cena: {self.price}zł'
-
-
-class Flat(Property):
-    def __init__(self, floor, area, rooms: int, price: int, address: str):
-        super().__init__(area, rooms, price, address)
-        self.floor = floor
-
-    def __str__(self):
-        return f'Mieszkanie {self.address} z {self.rooms} pokojami. ' \
-               f'Powierzchnia {self.area}m2. Piętro {self.floor}. ' \
-               f'Cena: {self.price}zł'
-
+from zad_3.House import House
+from zad_3.Flat import Flat
 
 h1 = House(300, 140, 4, 2500000, "Katowice")
 print(h1)

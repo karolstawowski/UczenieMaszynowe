@@ -1,67 +1,7 @@
-class Library:
-    def __init__(self, city: str, street: str, zip_code: str, open_hours: str,
-                 phone: str):
-        self.city = city
-        self.street = street
-        self.zip_code = zip_code
-        self.open_hours = open_hours
-        self.phone = phone
-
-    def __str__(self):
-        return f'Biblioteka w mieście {self.city} na ulicy {self.street}. ' \
-               f'Kod pocztowy: {self.zip_code}. ' \
-               f'Numer telefonu: {self.phone}. ' \
-               f'Godziny otwarcia: {self.open_hours}'
-
-
-class Employee:
-    def __init__(self, first_name: str, last_name: str, hire_date, birth_date,
-                 city: str, street: str, zip_code: str, phone: str):
-        self.phone = phone
-        self.zip_code = zip_code
-        self.street = street
-        self.city = city
-        self.birth_date = birth_date
-        self.hire_date = hire_date
-        self.last_name = last_name
-        self.first_name = first_name
-
-    def __str__(self):
-        return f'Pracownik {self.first_name} {self.last_name}. ' \
-               f'Zamieszkały: {self.street} {self.zip_code} {self.city}. ' \
-               f'Numer telefonu: {self.phone}. ' \
-               f'Zatrudniony {self.hire_date}. ' \
-               f'Urodzony {self.birth_date}'
-
-
-class Book:
-    def __init__(self, library, publication_date, author_name, author_surname,
-                 number_of_pages):
-        self.number_of_pages = number_of_pages
-        self.author_surname = author_surname
-        self.author_name = author_name
-        self.publication_date = publication_date
-        self.library = library
-
-    def __str__(self):
-        return f'Książka autorstwa {self.author_name} {self.author_surname} ' \
-               f'opublikowana {self.publication_date} ' \
-               f'zawiera {self.number_of_pages} stron ' \
-               f'znajduje się w {self.library}'
-
-
-class Order:
-    def __init__(self, employee, student, books, order_date):
-        self.order_date = order_date
-        self.books = books
-        self.student = student
-        self.employee = employee
-
-    def __str__(self):
-        return f'Zamówienie studenta {self.student} ' \
-               f'zrealizowane {self.order_date} ' \
-               f'przez {self.employee} na książki: {self.books}'
-
+from zad_2.Library import Library
+from zad_2.Employee import Employee
+from zad_2.Book import Book
+from zad_2.Order import Order
 
 l1 = Library("Katowice", "Chorzowska", "40-012", "10-18", "123456789")
 l2 = Library("Katowice", "Mikołowska", "40-014", "8-18", "123456798")
