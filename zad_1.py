@@ -1,10 +1,6 @@
 import zad_1.utils
 
 # Zadanie a
-def print_names(names):
-    for name in names:
-        print(name)
-
 
 print('\nZadanie a')
 print_names(['Ania', 'Bartek', 'Szymon', 'Adam', 'Staszek'])
@@ -13,7 +9,6 @@ print_names(['Ania', 'Bartek', 'Szymon', 'Adam', 'Staszek'])
 
 print('\nZadanie b1')
 print(multiply_numbers([4.2, 2.1, 6, 40, 0.51]))
-
 
 print('\nZadanie b2')
 print(multiply_numbers([4.2, 2.1, 6, 40, 0.51]))
