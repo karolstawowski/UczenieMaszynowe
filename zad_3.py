@@ -1,5 +1,5 @@
-from zad_3.House import House
-from zad_3.Flat import Flat
+from zad3.Flat import Flat
+from zad3.House import House
 
 h1 = House(300, 140, 4, 2500000, "Katowice")
 print(h1)

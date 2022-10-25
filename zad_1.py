@@ -1,4 +1,4 @@
-from zad_1.Student import Student
+from zad1.Student import Student
 
 s1 = Student("Jan", [80, 60, 45])
 print(s1.is_passed())

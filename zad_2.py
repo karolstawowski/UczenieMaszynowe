@@ -1,7 +1,7 @@
-from zad_2.Library import Library
-from zad_2.Employee import Employee
-from zad_2.Book import Book
-from zad_2.Order import Order
+from zad2.Book import Book
+from zad2.Employee import Employee
+from zad2.Library import Library
+from zad2.Order import Order
 
 l1 = Library("Katowice", "Chorzowska", "40-012", "10-18", "123456789")
 l2 = Library("Katowice", "Mikołowska", "40-014", "8-18", "123456798")

@@ -1,4 +1,4 @@
-from Property import Property
+from zad3.Property import Property
 
 
 class Flat(Property):
