@@ -1,8 +1,8 @@
 import numpy as np
 import cv2
 
-capture = cv2.VideoCapture('input_video.MP4')
-video_output = cv2.VideoWriter('output_video.mp4',
+capture = cv2.VideoCapture('./assets/input_video.MP4')
+video_output = cv2.VideoWriter('./assets/output_video.mp4',
                                cv2.VideoWriter_fourcc(*'mp4v'),
                                30,
                                (1920, 1080))
